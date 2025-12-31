@@ -151,7 +151,6 @@ class EmergencyDispatchEnv(gym.Env):
             # amb1 dispatch
             if self.call_active and self.amb1_busy == 0:
                 distance = abs(self.amb1_pos - self.call_zone)
-
                 reward += self.success_reward_base * prio_weight
                 reward -= prio_weight * distance
 
